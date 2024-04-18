@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Kerem Ata</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-image: repeating-linear-gradient(45deg,#ffffff,#ffffff 13px,#f7f7f7 13px,#f7f7f7 14px);
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="container">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+</html>

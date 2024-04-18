@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ali Kerem Ata</title>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-</head>
-<body>
-  <div class="container mt-4">
-    {% block content %}
-    {% endblock %}
-  </div>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<ul class="flex menu menu-horizontal bg-base-200">
+  <li><a href="/">Home</a></li>
+  <li><a href="/experiences/">Experiences</a></li>
+  <li><a href="/projects/">Projects</a></li>
+</ul>
+
+{% endblock %}

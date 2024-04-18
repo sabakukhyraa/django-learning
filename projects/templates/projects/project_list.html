@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>Project List</h2>
-  <div class="projects">
+<h1 class="text-6xl w-full flex justify-center mb-12">Projects</h1>
+<div class="w-full flex justify-center">
+  <div class="projects grid grid-cols-4 gap-4 justify-center">
     {% for project in projects %}
-      <div class="project">
-        <h2 class="company">
-          {{ project.projectName }}
-        </h2>
-        <p>{{ project.description }}</p>
+      <div class="card w-64 bg-base-100 shadow-lg">
+        <div class="card-body">
+          <h2 class="card-title">{{ project.projectName }}</h2>
+          <p>{{ project.description }}</p>
+        </div>
       </div>
     {% endfor %}
   </div>
+</div>
 {% endblock %}

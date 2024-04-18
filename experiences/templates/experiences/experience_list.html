@@ -5,7 +5,7 @@
   <div class="experiences">
     {% for experience in experiences %}
       <div class="experience">
-        <img src="../{{ experience.companyLogo }}" alt="{{ experience.companyName }} logo"/>
+        <img src="../../../{{ experience.companyLogo }}" alt="{{ experience.companyName }} logo"/>
         <span class="company">
           {{ experience.companyName }} - {{ experience.jobTitle }} - {{ experience.jobType }}
           ({{ experience.startDate|date:"d M Y" }} - {% if experience.endDate %} {{ experience.endDate }} {% else %} Still{% endif %})

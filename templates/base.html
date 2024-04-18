@@ -6,6 +6,26 @@
   <title>Ali Kerem Ata</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          container: {
+            center: true,
+            padding: {
+              DEFAULT: "3rem",
+              lg: "4rem",
+              xl: "5rem",
+              "2xl": "6rem",
+            },
+          },
+        }
+      }
+    }
+  </script>
+
+
   <style>
     html, body {
       margin: 0;
@@ -17,7 +37,16 @@
   </style>
 </head>
 <body class="min-h-screen">
-  <div class="w-full flex justify-center">
+  
+  <ul class="flex menu menu-horizontal justify-between flex-row w-full items-center bg-base-200">
+    <div class="flex">
+      <li><a href="/">Home</a></li>
+      <li><a href="/experiences/">Experiences</a></li>
+      <li><a href="/projects/">Projects</a></li>
+    </div>
+    <li class="self-end"><a>Ali Kerem Ata</a></li>
+  </ul>
+  <div class="w-full flex justify-center mb-12">
     <div class="container">
       {% block content %}
       {% endblock %}

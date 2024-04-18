@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1 class="text-6xl w-full flex justify-center mb-12">Experiences</h1>
-  <div class="experiences">
+  <h1 class="text-6xl w-full flex justify-center mb-12 mt-6 font-bold">Experiences</h1>
+  <div class="experiences space-y-8">
     {% for experience in experiences %}
-    <div class="flex items-center gap-8 p-8 flex-row rounded-xl bg-back-front">
+    <div class="flex items-center gap-8 p-8 flex-row rounded-xl bg-gray-100 shadow-lg">
       <img
-        class="object-contain rounded-lg self-center w-52 h-52 aspect-square mix-blend-multiply"
+        class="object-contain rounded-lg self-center w-52 h-52 aspect-square"
         src="{{ experience.companyLogo.url }}"
         alt="{{ experience.companyName }} logo"
       />
@@ -17,7 +17,7 @@
         <h3 class="font-bold text-2xl">{{ experience.jobTitle }} - {{ experience.jobType }}</h3>
         <p>{{ experience.description }}</p>
         <span>
-          ({{ experience.startDate|date:"d M Y" }} - {% if experience.endDate %} {{ experience.endDate }} {% else %} Still{% endif %})
+          ({{ experience.startDate|date:"M Y" }} - {% if experience.endDate %} {{ experience.endDate|date:"M Y" }}{% else %} Still{% endif %})
         </span>
       </div>
     </div>

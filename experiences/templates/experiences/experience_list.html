@@ -1,11 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experiences</title>
-</head>
-<body>
-  <h2>Experience List</h2>
-</body>
-</html>
+{% extends 'home.html' %}
+
+{% block content %}
+  <h1>Experience List</h1>
+  <div class="experiences">
+    {% for experience in experiences %}
+      <div class="experience">
+        <img src="../{{ experience.companyLogo }}" alt="{{ experience.companyName }} logo"/>
+        <span class="company">
+          {{ experience.companyName }} - {{ experience.jobTitle }} - {{ experience.jobType }}
+          ({{ experience.startDate|date:"d M Y" }} - {% if experience.endDate %} {{ experience.endDate }} {% else %} Still{% endif %})
+        </span>
+        <p>{{ experience.description }}</p>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

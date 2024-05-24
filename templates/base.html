@@ -1,56 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ali Kerem Ata</title>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ali Kerem Ata</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          container: {
-            center: true,
-            padding: {
-              DEFAULT: "3rem",
-              lg: "4rem",
-              xl: "5rem",
-              "2xl": "6rem",
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            container: {
+              center: true,
+              padding: {
+                DEFAULT: "3rem",
+                lg: "4rem",
+                xl: "5rem",
+                "2xl": "6rem",
+              },
             },
           },
-        }
+        },
+      };
+    </script>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
       }
-    }
-  </script>
-
-
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      background-image: repeating-linear-gradient(45deg,#ffffff,#ffffff 13px,#f7f7f7 13px,#f7f7f7 14px);
-    }
-  </style>
-</head>
-<body class="min-h-screen">
-  
-  <ul class="flex menu menu-horizontal justify-between flex-row w-full items-center bg-base-200">
-    <div class="flex">
-      <li><a href="/">Home</a></li>
-      <li><a href="/experiences/">Experiences</a></li>
-      <li><a href="/projects/">Projects</a></li>
+      body {
+        background-image: repeating-linear-gradient(
+          45deg,
+          #ffffff,
+          #ffffff 13px,
+          #f7f7f7 13px,
+          #f7f7f7 14px
+        );
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <ul
+      class="flex menu menu-horizontal justify-between flex-row w-full items-center bg-base-200"
+    >
+      <div class="flex">
+        <li><a href="/">Home</a></li>
+        <li><a href="/experiences/">Experiences</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/send-resume/">Resume</a></li>
+      </div>
+      <li class="self-end"><a>Ali Kerem Ata</a></li>
+    </ul>
+    <div class="w-full flex justify-center mb-12">
+      <div class="container">{% block content %} {% endblock %}</div>
     </div>
-    <li class="self-end"><a>Ali Kerem Ata</a></li>
-  </ul>
-  <div class="w-full flex justify-center mb-12">
-    <div class="container">
-      {% block content %}
-      {% endblock %}
-    </div>
-  </div>
-</body>
+  </body>
 </html>

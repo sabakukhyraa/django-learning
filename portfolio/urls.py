@@ -10,6 +10,7 @@ urlpatterns = [
     path('', views.home),
     path('experiences/', include('experiences.urls')),
     path('projects/', include('projects.urls')),
+    path('generalsettings/', include('generalsettings.urls')),
     path('send-resume/', views.send_resume_with_email, name='send_resume_with_email'),
 ]
 

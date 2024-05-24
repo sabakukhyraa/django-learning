@@ -28,9 +28,8 @@
       },
       daisyui: {
         themes: ['light'],
-        darkTheme: false,
+        darkTheme: 'class',
       },
-      darkMode: false,
     }
   </script>
 
@@ -51,11 +50,14 @@
           #f7f7f7 14px
         );
     }
+    h1, h2, h3, h4, h5, h6, p, li {
+      color: black !important;
+    }
   </style>
 </head>
 <body class="min-h-screen">
     <ul
-      class="flex menu menu-horizontal justify-between flex-row w-full items-center bg-base-200"
+      class="flex menu menu-horizontal justify-between flex-row w-full items-center bg-gray-100 shadow-md"
     >
     <div class="flex">
       <li><a href="/">Home</a></li>

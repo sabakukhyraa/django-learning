@@ -4,4 +4,5 @@ from .models import GeneralSetting
 # Create your views here.
 def generalSetting(request):
   generalSettings = GeneralSetting.objects.all()
-  return render(request, 'base.html', {'generalSettings': generalSettings})
+  print(generalSettings)
+  return render(request, 'home.html', {'generalSettings': generalSettings})

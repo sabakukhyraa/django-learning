@@ -22,11 +22,15 @@
       <div
         class="relative flex items-center justify-center w-full h-screen px-8 text-4xl font-medium text-center lg:text-6xl text-gray"
       >
-        I'm 23. I'm from Istanbul, Turkiye. I'm studying Information
-        Technologies Engineering at Piri Reis University. I'm learning
-        everything about web. I believe engineering is the perfect planning of
-        solutions with foresight. My dream is to be one of the best engineers.
+      {% if generalSettings %}
+        {% for post in generalSettings %}
+            <p>{{ post.content }}</p>
+        {% endfor %}
+      {% else %}
+          <p>No posts available</p>
+      {% endif %}
       </div>
+
       <div class="flex flex-col items-center justify-center gap-12 pb-24">
         <div
           class="mb-24 flex flex-col w-full gap-12 lg:text-start text-center"

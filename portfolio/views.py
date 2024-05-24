@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.core.mail import EmailMessage
-from django.shortcuts import render, redirect
+from django.shortcuts import render
+from django.conf import settings
 from .forms import EmailForm
 import os
 
@@ -18,7 +19,7 @@ def send_resume_with_email(request):
         if form.is_valid():
             email_address = form.cleaned_data['email']
 
-            pdf_path = os.path.join('C:\\', 'odevs\\', 'portfolio\\', 'media\\', 'MayResume2024.pdf')
+            pdf_path = os.path.join(settings.MEDIA_ROOT, 'MayResume2024.pdf')
 
             email = EmailMessage(
                 'Ali Kerem Ata - CV',
